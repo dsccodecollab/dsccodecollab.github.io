@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "firebase": "^7.22.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
@@ -58,6 +59,9 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": ["eslint --fix","git add"]
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
