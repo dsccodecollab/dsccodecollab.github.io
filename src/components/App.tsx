@@ -29,6 +29,10 @@ const App = () => {
       style={{ width: '95%' }}
     >
       <Header />
+      <div className="jumbotron text-center mt-4 welcome-tab">
+        <p className="welcome">Welcome to The Code Culture</p>
+        <h1 className="brand-heading">Talk is cheap, show me the code</h1>
+      </div>
     </div>
   )
 }
