@@ -48,7 +48,7 @@ const App = () => {
         <Switch>
           {
             privateRoutes.map((url, index) => (
-              <Route key={index} path={url.path} render={() => <url.component />} />
+              <Route key={index} path={url.path} component={() => <url.component />} />
             ))
           }
         </Switch>
@@ -65,7 +65,7 @@ const App = () => {
         <Switch>
           {
             publicRoutes.map((url, index) => (
-              <Route key={index} path={url.path} render={() => <url.component />} />
+              <Route key={index} path={url.path} component={() => <url.component />} />
             ))
           }
           <Redirect to="/" />
