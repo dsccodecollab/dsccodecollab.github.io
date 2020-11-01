@@ -29,9 +29,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:all": "CI=false react-scripts test && yarn run lint",
+    "test:all": "CI=true react-scripts test && yarn run lint",
     "lint": "eslint --ext .tsx --ext .ts src/",
     "lint:fix": "eslint --ext .tsx --ext .ts src/ --fix",
     "eject": "react-scripts eject"
