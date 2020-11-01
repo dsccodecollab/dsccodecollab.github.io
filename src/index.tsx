@@ -4,13 +4,10 @@ import './index.css'
 import App from './components/App'
 import * as serviceWorker from './serviceWorker'
 import 'react-toastify/dist/ReactToastify.css'
-import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter forceRefresh={true}>
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -4,6 +4,7 @@ import '../styles/App.css'
 import Authenticate from './Authenticate'
 import Landing from './Landing'
 import {
+  BrowserRouter,
   Switch,
   Route,
   Redirect
@@ -40,37 +41,41 @@ const App = () => {
 
   if (fire.auth().currentUser) {
     return (
-      <div
-        className="container-fluid"
-        style={{ width: '95%' }}
-      >
-        <Header />
-        <Switch>
-          {
-            privateRoutes.map((url, index) => (
-              <Route key={index} path={url.path} component={() => <url.component />} />
-            ))
-          }
-        </Switch>
-      </div>
+      <BrowserRouter>
+        <div
+          className="container-fluid"
+          style={{ width: '95%' }}
+        >
+          <Header />
+          <Switch>
+            {
+              privateRoutes.map((url, index) => (
+                <Route key={index} path={url.path} component={() => <url.component />} />
+              ))
+            }
+          </Switch>
+        </div>
+      </BrowserRouter>
 
     )
   } else {
     return (
-      <div
-        className="container-fluid"
-        style={{ width: '95%' }}
-      >
-        <Header />
-        <Switch>
-          {
-            publicRoutes.map((url, index) => (
-              <Route key={index} path={url.path} component={() => <url.component />} />
-            ))
-          }
-          <Redirect to="/" />
-        </Switch>
-      </div>
+      <BrowserRouter>
+        <div
+          className="container-fluid"
+          style={{ width: '95%' }}
+        >
+          <Header />
+          <Switch>
+            {
+              publicRoutes.map((url, index) => (
+                <Route key={index} path={url.path} component={() => <url.component />} />
+              ))
+            }
+            <Redirect to="/" />
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
