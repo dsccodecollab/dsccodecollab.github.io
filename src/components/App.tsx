@@ -1,40 +1,93 @@
-import React from 'react'
-// import Component1 from './compenent1'
-// import ExampleType from '../types/ExampleType'
+import React, { useEffect } from 'react'
 import Header from './Header'
 import '../styles/App.css'
+import Authenticate from './Authenticate'
+import Landing from './Landing'
+import {
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+import Dashboard from './Dashboard'
+import fire from '../config'
 
 const App = () => {
-  // const prop: ExampleType = {
-  //   id: 12345,
-  //   name: 'some name',
-  //   obj: [
-  //     {
-  //       num: 1,
-  //       somethings: ['a', 'b', 'c']
-  //     },
-  //     {
-  //       num: 2,
-  //       somethings: ['d', 'e', 'f']
-  //     },
-  //     {
-  //       num: 3,
-  //       somethings: ['g', 'h', 'i']
-  //     }
-  //   ]
-  // }
-  return (
-    <div
-      className="container-fluid"
-      style={{ width: '95%' }}
-    >
-      <Header />
-      <div className="jumbotron text-center mt-4 welcome-tab">
-        <p className="welcome">Welcome to The Code Culture</p>
-        <h1 className="brand-heading">Talk is cheap, show me the code</h1>
+  async function IsLoggedIn () {
+    try {
+      await new Promise((resolve, reject) =>
+        fire.auth().onAuthStateChanged(
+          user => {
+            if (user) {
+              console.log(user)
+              return true
+            } else {
+              return false
+            }
+          }
+        )
+      )
+    } catch (error) {
+      return false
+    }
+  }
+
+  useEffect(() => {
+    IsLoggedIn()
+  }, [])
+
+  if (fire.auth().currentUser) {
+    return (
+      <div
+        className="container-fluid"
+        style={{ width: '95%' }}
+      >
+        <Header />
+        <Switch>
+          {
+            privateRoutes.map((url, index) => (
+              <Route key={index} path={url.path} render={() => <url.component />} />
+            ))
+          }
+        </Switch>
       </div>
-    </div>
-  )
+
+    )
+  } else {
+    return (
+      <div
+        className="container-fluid"
+        style={{ width: '95%' }}
+      >
+        <Header />
+        <Switch>
+          {
+            publicRoutes.map((url, index) => (
+              <Route key={index} path={url.path} render={() => <url.component />} />
+            ))
+          }
+          <Redirect to="/" />
+        </Switch>
+      </div>
+    )
+  }
 }
+
+const publicRoutes = [
+  {
+    path: '/join',
+    component: Authenticate
+  },
+  {
+    path: '/',
+    component: Landing
+  }
+]
+
+const privateRoutes = [
+  {
+    path: '/',
+    component: Dashboard
+  }
+]
 
 export default App

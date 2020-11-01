@@ -1,6 +1,20 @@
 import React from 'react'
+import fire from '../config'
+import { useHistory } from 'react-router-dom'
 
-function Header () {
+const Header = () => {
+  const history = useHistory()
+
+  const logout = () => {
+    fire.auth().signOut()
+      .then(() => {
+        history.push('/')
+      })
+      .catch((err) => {
+        console.log('An error occured', err)
+      })
+  }
+
   return (
     <div className=" container-fluid header mt-4 py-2">
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -21,9 +35,16 @@ function Header () {
             <li className="nav-item navs">
               <a className="nav-link" href="/contact">Contact</a>
             </li>
-            <li className="nav-item navs">
-              <a className="nav-link" href="/join">Register/Login</a>
-            </li>
+            {
+              fire.auth().currentUser != null
+                ? <li className="nav-item navs">
+                  <button onClick={() => logout()} className="nav-link logout">Logout</button>
+                </li>
+                : <li className="nav-item navs">
+                  <a className="nav-link" href="/join">Join</a>
+                </li>
+            }
+
           </ul>
 
         </div>
