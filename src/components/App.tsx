@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import '../styles/App.css'
 import Authenticate from './Authenticate'
@@ -12,12 +12,15 @@ import Dashboard from './Dashboard'
 import fire from '../config'
 
 const App = () => {
+  const [user, setUser] = useState({})
+
   async function IsLoggedIn () {
     try {
       await new Promise((resolve, reject) =>
         fire.auth().onAuthStateChanged(
           user => {
             if (user) {
+              setUser(user)
               console.log(user)
               return true
             } else {
@@ -33,7 +36,7 @@ const App = () => {
 
   useEffect(() => {
     IsLoggedIn()
-  }, [])
+  }, [user])
 
   if (fire.auth().currentUser) {
     return (
