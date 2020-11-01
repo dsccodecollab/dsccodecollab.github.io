@@ -1,14 +1,46 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap');
+
+.header {
+  border-radius: 20px;
+  background: #b8bbbc;
+  box-shadow:  7px 7px 14px #838585, 
+               -7px -7px 14px #edf1f3; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navs {
+  border-radius: 50px;
+  background: #b8bbbc;
+  box-shadow:  7px 7px 7px #838585, 
+               -7px -7px 14px #edf1f3;
+  margin: 0px 20px 0px 0px;
+  text-transform: uppercase;
+  padding : 0px 10px 0px 10px;
+}
+
+.navs a {
+  color: black !important;
+}
+
+.navs:hover{
+  box-shadow: inset -2px -2px 8px 0 rgba(255, 255, 255, 1), inset -2px -2px 12px 0 rgba(255, 255, 255, 0.5), inset 2px 2px 4px 0 rgba(255, 255, 255, 0.1), inset 2px 2px 8px 0 rgba(0, 0, 0, .15);
+  transform: scale(0.98);
+}
+
+.welcome-tab{
+  border-radius: 20px;
+  background: #b8bbbc;
+  box-shadow:  7px 7px 14px #838585, 
+               -7px -7px 14px #edf1f3; 
+}
+
+.welcome{
+  font-family: "Caveat", cursive;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.brand-heading {
+  font-family: "Patrick Hand", cursive;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
