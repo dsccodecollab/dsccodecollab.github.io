@@ -27,7 +27,6 @@ function Login () {
             email: '',
             password: ''
           })
-          console.log('Signed in')
           history.push('/')
         })
         .catch((err) => {
@@ -36,8 +35,7 @@ function Login () {
             email: '',
             password: ''
           })
-          console.log(err)
-          toast.error('You are not registered. Try registering first')
+          toast.error(err.message)
         })
     } else {
       toast.error('Please fill all the fields')
@@ -48,10 +46,10 @@ function Login () {
     <div className="container login-box mt-4">
       <ToastContainer />
       <div className="row">
-        <div className="col-6 text-center">
-          <img src="https://avatars0.githubusercontent.com/u/71917554?s=200&v=4" alt="the coding culture" style={{ height: '60%', verticalAlign: 'middle' }} />
+        <div className="col-md-6 col-sm-12 text-center">
+          <img src="https://avatars0.githubusercontent.com/u/71917554?s=200&v=4" alt="the coding culture" />
         </div>
-        <div className="col-6">
+        <div className="col-md-6 col-sm-12">
           <h1 className="text-center">Log In</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-group">

@@ -32,7 +32,6 @@ function Register () {
               password: '',
               confirmPassword: ''
             })
-            console.log('User created')
             history.push('/')
           })
           .catch((err) => {
@@ -42,8 +41,7 @@ function Register () {
               password: '',
               confirmPassword: ''
             })
-            console.log(err)
-            toast.error('Server error occured')
+            toast.error(err.message)
           })
       } else {
         toast.error('Password and confirm Password must be same')
@@ -57,10 +55,10 @@ function Register () {
     <div className="container mt-4">
       <ToastContainer />
       <div className="row">
-        <div className="col-6 text-center">
-          <img src="https://avatars0.githubusercontent.com/u/71917554?s=200&v=4" alt="the coding culture" style={{ height: '60%', verticalAlign: 'middle' }} />
+        <div className="col-md-6 col-sm-12 text-center">
+          <img src="https://avatars0.githubusercontent.com/u/71917554?s=200&v=4" alt="the coding culture" />
         </div>
-        <div className="col-6">
+        <div className="col-md-6 col-sm-12">
           <h1 className="text-center">Register</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-group">

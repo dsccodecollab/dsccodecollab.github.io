@@ -1,6 +1,6 @@
 import React from 'react'
 import fire from '../config'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const Header = () => {
   const history = useHistory()
@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className=" container-fluid header mt-4 py-2">
       <nav className="navbar navbar-expand-lg navbar-light ">
-        <a className="navbar-brand navs px-3 py-2" href="/">The Coding Culture</a>
+        <Link className="navbar-brand navs px-3 py-2" to="/">The Coding Culture</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -27,13 +27,13 @@ const Header = () => {
           <div className="mr-auto"></div>
           <ul className="navbar-nav px-3">
             <li className="nav-item navs">
-              <a className="nav-link" href="/">Home</a>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item navs">
-              <a className="nav-link" href="/about">About</a>
+              <Link className="nav-link" to="/about">About</Link>
             </li>
             <li className="nav-item navs">
-              <a className="nav-link" href="/contact">Contact</a>
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
             {
               fire.auth().currentUser != null
@@ -41,7 +41,7 @@ const Header = () => {
                   <button onClick={() => logout()} className="nav-link logout">Logout</button>
                 </li>
                 : <li className="nav-item navs">
-                  <a className="nav-link" href="/join">Join</a>
+                  <Link className="nav-link" to="/join">Join</Link>
                 </li>
             }
 
