@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom'
 import Dashboard from './Dashboard'
 import fire from '../config'
+import Topic from './Topic'
 
 const App = () => {
   const [user, setUser] = useState({})
@@ -84,6 +85,10 @@ const publicRoutes = [
   {
     path: '/join',
     component: Authenticate
+  },
+  {
+    path: '/topic',
+    component: Topic
   },
   {
     path: '/',
