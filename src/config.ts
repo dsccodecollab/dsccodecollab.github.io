@@ -1,3 +1,7 @@
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore'
+
 export const firebaseConfig = {
   apiKey: 'AIzaSyA-VHOgEdOj10lD2jTiwehnHFsSoLV76yY',
   authDomain: 'dsc-code-collab.firebaseapp.com',
@@ -8,3 +12,7 @@ export const firebaseConfig = {
   appId: '1:76652849293:web:7c7ff378dc1e69bf241ac4',
   measurementId: 'G-CLDVE6SJD2'
 }
+
+const fire = firebase.initializeApp(firebaseConfig)
+
+export default fire

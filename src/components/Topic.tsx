@@ -52,7 +52,7 @@ export default function Topic () {
   }
 
   return (
-    <div>
+    <div className="container rounded shadow-lg mt-5 py-5 px-5">
       <div className="resources-tab">
         <h1
           className="topic"

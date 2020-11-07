@@ -59,3 +59,10 @@
   border-radius: 0px;
   box-shadow: 0px 12px 5px #58727a, 0px -12px 5px #303030 !important;
 }
+.logout {
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  color: black !important;
+  text-transform: uppercase;
+}
