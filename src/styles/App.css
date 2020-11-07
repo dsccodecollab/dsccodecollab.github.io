@@ -44,7 +44,20 @@
   font-size: 20px;
   letter-spacing: 2px;
 }
+.resources-tab {
+  border-radius: 50px;
+  background: #fcfcfc;
+  box-shadow: 26px 26px 52px #fdfdfd, -26px -26px 52px #f9fafa;
+}
 
+.topic {
+  margin-bottom: 0px !important;
+}
+
+.sub-topic {
+  border-radius: 0px;
+  box-shadow: 0px 12px 5px #58727a, 0px -12px 5px #303030 !important;
+}
 .logout {
   text-decoration: none;
   border: none;
