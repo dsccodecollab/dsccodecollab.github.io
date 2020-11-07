@@ -56,7 +56,7 @@ function Register () {
       <ToastContainer />
       <div className="row">
         <div className="col-md-6 col-sm-12 text-center">
-          <img src="https://avatars0.githubusercontent.com/u/71917554?s=200&v=4" alt="the coding culture" />
+          <img src="https://avatars0.githubusercontent.com/u/71917554?s=200&v=4" alt="the Coding Culture" />
         </div>
         <div className="col-md-6 col-sm-12">
           <h1 className="text-center">Register</h1>
