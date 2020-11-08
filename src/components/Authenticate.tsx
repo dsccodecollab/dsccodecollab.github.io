@@ -32,7 +32,7 @@ const Authenticate = () => {
     setValue(newValue)
   }
   return (
-    <div className="container rounded shadow-lg mt-5 py-5 px-5">
+    <div className="container rounded shadow-lg mt-5 py-5 px-5" style={{ zIndex: -1 }}>
       <AppBar
         className="shadow"
         position="static"
