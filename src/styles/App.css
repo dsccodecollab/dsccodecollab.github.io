@@ -2,80 +2,10 @@
 
 body{
   margin: 0 !important; 
-}
-
-.header {
-  border-radius: 20px;
   background: #b8bbbc;
-  box-shadow:  7px 7px 14px #838585, 
-               -7px -7px 14px #edf1f3; 
 }
 
-.navs {
-  border-radius: 50px;
-  background: #b8bbbc;
-  box-shadow:  7px 7px 7px #838585, 
-               -7px -7px 14px #edf1f3;
-  margin: 0px 20px 0px 0px;
-  text-transform: uppercase;
-  padding : 0px 10px 0px 10px;
-}
-
-.navs a {
-  color: black !important;
-}
-
-.navs:hover{
-  box-shadow: inset -2px -2px 8px 0 rgba(255, 255, 255, 1), inset -2px -2px 12px 0 rgba(255, 255, 255, 0.5), inset 2px 2px 4px 0 rgba(255, 255, 255, 0.1), inset 2px 2px 8px 0 rgba(0, 0, 0, .15);
-  transform: scale(0.98);
-}
-
-.welcome-tab{
-  border-radius: 20px;
-  background: #b8bbbc;
-  box-shadow:  7px 7px 14px #838585, 
-               -7px -7px 14px #edf1f3; 
-}
-
-.welcome{
-  font-family: "Caveat", cursive;
-  font-size: 45px;
-  letter-spacing: 2px;
-}
-
-.brand-heading {
-  font-family: "Patrick Hand", cursive;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-.resources-tab {
-  border-radius: 50px;
-  background: #fcfcfc;
-  box-shadow: 26px 26px 52px #fdfdfd, -26px -26px 52px #f9fafa;
-}
-
-.topic {
-  margin-bottom: 0px !important;
-}
-
-.sub-topic {
-  border-radius: 0px;
-  box-shadow: 0px 12px 5px #58727a, 0px -12px 5px #303030 !important;
-}
-.logout {
-  text-decoration: none;
-  border: none;
-  background: transparent;
-  color: black !important;
-  text-transform: uppercase;
-}
-
-.mobile {
-  background: #b8bbbc;
-  box-shadow:  7px 7px 14px #838585, 
-               -7px -7px 14px #edf1f3; 
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
 }

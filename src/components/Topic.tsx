@@ -4,7 +4,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
-import '../styles/App.css'
+import '../styles/topic.css'
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -52,7 +52,7 @@ export default function Topic () {
   }
 
   return (
-    <div className="container rounded shadow-lg mt-5 py-5 px-5">
+    <div className="container my-5 py-5 px-5">
       <div className="resources-tab">
         <h1
           className="topic"

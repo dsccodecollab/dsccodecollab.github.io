@@ -3,7 +3,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import fire from '../config'
 import { useHistory } from 'react-router-dom'
 
-function Register () {
+const Register = () => {
   const history = useHistory()
 
   const [user, setUser] = useState({

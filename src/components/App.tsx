@@ -42,7 +42,7 @@ const App = () => {
 
   if (fire.auth().currentUser) {
     return (
-      <BrowserRouter forceRefresh={true}>
+      <BrowserRouter>
         <div
           className="container-fluid"
           style={{ width: '95%' }}
@@ -61,7 +61,7 @@ const App = () => {
     )
   } else {
     return (
-      <BrowserRouter forceRefresh={true}>
+      <BrowserRouter>
         <div
           className="container-fluid"
         >
