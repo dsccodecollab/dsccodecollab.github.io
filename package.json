@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -13,6 +14,8 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router": "^5.1.8",
     "@types/react-router-dom": "^5.1.6",
+    "@types/react-swipeable": "^5.2.0",
+    "@types/react-swipeable-views": "^0.13.0",
     "@types/react-toastify": "^4.1.0",
     "firebase": "^7.22.0",
     "js-cookie": "^2.2.1",
@@ -22,10 +25,12 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-swipeable": "^6.0.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "views": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

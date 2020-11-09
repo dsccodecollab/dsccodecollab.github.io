@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap');
 
+body{
+  margin: 0 !important; 
+}
+
 .header {
   border-radius: 20px;
   background: #b8bbbc;
@@ -64,4 +68,14 @@
   background: transparent;
   color: black !important;
   text-transform: uppercase;
+}
+
+.mobile {
+  background: #b8bbbc;
+  box-shadow:  7px 7px 14px #838585, 
+               -7px -7px 14px #edf1f3; 
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
 }
