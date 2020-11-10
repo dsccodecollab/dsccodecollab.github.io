@@ -13,7 +13,7 @@ interface TabPanelProps {
     value: any;
 }
 
-function TabPanel (props: TabPanelProps) {
+const TabPanel = (props: TabPanelProps) => {
   const { children, value, index } = props
 
   return (
@@ -32,7 +32,7 @@ const Authenticate = () => {
     setValue(newValue)
   }
   return (
-    <div className="container rounded shadow-lg mt-5 py-5 px-5" style={{ zIndex: -1 }}>
+    <div className="container my-5 py-5 px-5" style={{ zIndex: -1 }}>
       <AppBar
         className="shadow"
         position="static"

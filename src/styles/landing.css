@@ -1,0 +1,15 @@
+.welcome-tab {
+	border-radius: 20px;
+}
+
+.welcome {
+	font-family: "Caveat", cursive;
+	font-size: 45px;
+	letter-spacing: 2px;
+}
+
+.brand-heading {
+	font-family: "Patrick Hand", cursive;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
