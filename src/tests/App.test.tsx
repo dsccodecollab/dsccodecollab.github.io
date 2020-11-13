@@ -5,6 +5,6 @@ import '@testing-library/jest-dom/extend-expect'
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />)
-  const linkElement = getByText(/&quot;Welcome to The Coding Culture&quot;/i)
+  const linkElement = getByText(/The Biggest Student-run coding community of India/i)
   expect(linkElement).toBeInTheDocument()
 })
