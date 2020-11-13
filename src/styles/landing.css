@@ -1,15 +1,37 @@
-.welcome-tab {
-	border-radius: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
 .welcome {
 	font-family: "Caveat", cursive;
-	font-size: 45px;
-	letter-spacing: 2px;
+	font-size: 2rem;
+	letter-spacing: 3px;
+	font-weight: bolder !important;	
 }
 
 .brand-heading {
 	font-family: "Patrick Hand", cursive;
 	font-size: 20px;
+	color: orange
+}
+
+.welcome2 {
+	font-family: "Caveat", cursive;
+	font-size: 2rem;
+	letter-spacing: 4px;
+	font-weight: bolder !important;	
+}
+
+.welcome::before {
+	content: '';
+	background-color: red;
+	width: 90px;
+	height: 5px;
+	position: absolute;
+	top: 20;
+}
+
+.tag-line {
+	color: #ffffff;
+	font-size: 35px;
+	font-family: "Goldman", cursive;
 	letter-spacing: 2px;
 }

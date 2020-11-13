@@ -1,54 +1,23 @@
-import React, { useState } from 'react'
-import Login from './Login'
+import React from 'react'
 import Register from './Register'
-import AppBar from '@material-ui/core/AppBar'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
-
-interface TabPanelProps {
-    children?: React.ReactNode;
-    index: any;
-    value: any;
-}
-
-const TabPanel = (props: TabPanelProps) => {
-  const { children, value, index } = props
-
-  return (
-    <div hidden={value !== index}>
-      <Box p={3}>
-        <Typography>{children}</Typography>
-      </Box>
-    </div>
-  )
-}
+import '../styles/Authenticate.css'
 
 const Authenticate = () => {
-  const [value, setValue] = useState(0)
-
-  function handleChange (event: React.ChangeEvent<{}>, newValue: number) {
-    setValue(newValue)
-  }
   return (
-    <div className="container my-5 py-5 px-5" style={{ zIndex: -1 }}>
-      <AppBar
-        className="shadow"
-        position="static"
-        style={{ backgroundColor: '#53e0f3', color: 'black' }}
-      >
-        <Tabs value={value} onChange={handleChange} centered>
-          <Tab label="Register" />
-          <Tab label="Login" />
-        </Tabs>
-      </AppBar>
-      <TabPanel value={value} index={0}>
-        <Register />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Login />
-      </TabPanel>
+    <div className="container authenticate mt-5" style={{ zIndex: 100 }}>
+      <div className="row">
+        <div className="col-sm-12 col-md-6 left-panel text-center py-5 px-5">
+          <img
+            src="https://cdn.discordapp.com/attachments/764129322088267837/770685331305005096/The_coding_culture-05.png"
+            alt="the coding culture"
+            height="150"
+          />
+          <p className="alternate text-center mt-2 text-wrap">Register for upcoming contests <br/ > and get notified first</p>
+        </div>
+        <div className="col-sm-12 col-md-6 py-4 px-5">
+          <Register />
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap');
 
 body{
-  margin: 0 !important; 
-  background: #b8bbbc;
+  margin: 0 !important;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);  
+
 }
 
 .container-fluid {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 import fire from '../config'
 
 const Login = () => {
@@ -43,30 +43,20 @@ const Login = () => {
   }
 
   return (
-    <div className="container login-box mt-4">
-      <ToastContainer />
-      <div className="row">
-        <div className="col-md-6 col-sm-12 text-center">
-          <img src="https://avatars0.githubusercontent.com/u/71917554?s=200&v=4" alt="the coding culture" />
-        </div>
-        <div className="col-md-6 col-sm-12">
-          <h1 className="text-center">Log In</h1>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input className="form-control" type="text" placeholder="xyz@gmail.com" value={email} onChange={handleChange('email')} />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Password</label>
-              <input className="form-control" type="password" placeholder="*confidential" value={password} onChange={handleChange('password')} />
-            </div>
-            <div className="form-group text-center">
-              <button type="submit" className="btn btn-success">Log in</button>
-            </div>
-          </form>
-        </div>
+    <form onSubmit={handleSubmit} className="py-5">
+      <h1 className="text-center mb-4 title">Sign in</h1>
+      <div className="form-group px-3">
+        <i className="fas fa-user"></i>
+        <input className="" type="text" placeholder="xyz@gmail.com" value={email} onChange={handleChange('email')} />
       </div>
-    </div>
+      <div className="form-group px-3">
+        <i className="fas fa-user"></i>
+        <input className="" type="password" placeholder="confidential" value={password} onChange={handleChange('password')} />
+      </div>
+      <div className="text-center mt-3">
+        <button type="submit" className="btn btn-success px-5">Log in</button>
+      </div>
+    </form>
   )
 }
 

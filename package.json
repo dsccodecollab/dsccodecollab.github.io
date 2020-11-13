@@ -17,10 +17,12 @@
     "@types/react-swipeable": "^5.2.0",
     "@types/react-swipeable-views": "^0.13.0",
     "@types/react-toastify": "^4.1.0",
+    "emailjs-com": "^2.6.3",
     "firebase": "^7.22.0",
     "js-cookie": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-particles-js": "^3.4.1",
     "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -29,7 +31,6 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "typescript": "~3.7.2",
     "views": "^1.0.2"
   },
   "scripts": {
@@ -66,7 +67,8 @@
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.3.0",
-    "lint-staged": "^10.4.0"
+    "lint-staged": "^10.4.0",
+    "typescript": "^3.7.5"
   },
   "husky": {
     "hooks": {
