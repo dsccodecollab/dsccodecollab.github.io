@@ -13,6 +13,7 @@ install:
 
 script:
   - yarn run build
+  - yarn run build:tailwind
   - yarn run test:all
 
 deploy:

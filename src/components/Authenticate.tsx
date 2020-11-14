@@ -11,7 +11,7 @@ const Authenticate = () => {
         <div className="row">
           <div className="col-sm-12 col-md-6 left-panel text-center py-5 px-5">
             <img
-              src="https://cdn.discordapp.com/attachments/764129322088267837/770685331305005096/The_coding_culture-05.png"
+              src="/logo512.png"
               alt="the coding culture"
               height="150"
             />
