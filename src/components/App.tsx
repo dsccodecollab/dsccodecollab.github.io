@@ -12,6 +12,8 @@ import {
 import Topic from './Topic'
 import { ToastContainer } from 'react-toastify'
 import Particles from 'react-particles-js'
+import Footer from './Footer'
+import About from './About'
 
 const App = () => {
   // const [user, setUser] = useState({})
@@ -193,6 +195,7 @@ const App = () => {
           }}
         />
       </div>
+      <Footer />
     </BrowserRouter>
   )
 }
@@ -206,6 +209,10 @@ const publicRoutes = [
   {
     path: '/topic',
     component: Topic
+  },
+  {
+    path: '/about',
+    component: About
   },
   {
     path: '/',
