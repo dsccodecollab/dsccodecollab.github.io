@@ -1,42 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 .editor-header {
-    background-color: aqua;
+    background-color: #222222;
 }
 
 .editor {
-    background-color: black;
+    background-color: #222222;
     height: 30vh;
 }
 
 .span1 {
-    height: 25px;
-    width: 25px;
-    background-color: rgb(250, 222, 9);
+    height: 12px;
+    width: 12px;
+    background-color: #FF5F55;
     border-radius: 50%;
     display: inline-block;
 }
 
 .span2 {
-    height: 25px;
-    width: 25px;
-    background-color: rgb(4, 223, 59);
+    height: 12px;
+    width: 12px;
+    background-color: #FFBD2D;
     border-radius: 50%;
     display: inline-block;
 }
 
 .span3 {
-    height: 25px;
-    width: 25px;
-    background-color: rgb(250, 9, 9);
+    height: 12px;
+    width: 12px;
+    background-color: #25C93F;
     border-radius: 50%;
     display: inline-block;  
 }
 
 .code {
     color: white;
-    font-family: "Roboto Mono", monospace;
-    font-size: 1.5rem;
+    font-family: "JetBrainsMono", monospace;
     animation: type1 10s infinite;
     width: 0ch;
     overflow: hidden;
@@ -51,8 +50,7 @@
 
 .code1 {
     color: white;
-    font-family: "Roboto Mono", monospace;
-    font-size: 1.5rem;
+    font-family: "JetBrainsMono", monospace;
     animation: type2 10s infinite;
     width: 0ch;
     overflow: hidden;
@@ -66,22 +64,15 @@
 }
 
 .string {
-    color: orange;
+    color: #FFBD2D;
 }
 
 .print {
-    color: yellow
+    color: white
 }
 
-@media (max-width: 700px)
-{
-    .code{
-        font-size: 0.9rem;
-    }
-
-    .code1 {
-        font-size: 0.8rem;
-    }
+.parentheses {
+    color: white;
 }
 
 @keyframes type1 {

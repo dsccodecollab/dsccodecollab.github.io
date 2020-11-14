@@ -20,40 +20,36 @@ const Header = () => {
   }
 
   return (
-
-    <div
-      className="container"
-    >
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <Link className="navbar-brand px-3 py-2 my-3 text-center tcc-logo rounded-circle" to="/">
-          <img
-            src="https://cdn.discordapp.com/attachments/764129322088267837/770685331305005096/The_coding_culture-05.png"
-            alt="the coding culture"
-            height="64"
-          />
-        </Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <div className="mr-auto"></div>
-          <ul className="navbar-nav px-3 justify-content-end">
+    <nav className="navbar navbar-expand-lg navbar-light shadow-sm md:px-24">
+      <Link className="navbar-brand text-center" to="/">
+        <img
+          src="https://cdn.discordapp.com/attachments/764129322088267837/770685331305005096/The_coding_culture-05.png"
+          alt="the coding culture"
+          className="w-16 h-auto"
+          style={{ filter: 'invert(1)' }}
+        />
+      </Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon text-white"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="mr-auto"></div>
+        <ul className="navbar-nav px-3 justify-content-end">
+          <li className="nav-item navs my-3">
+            <Link className="nav-link btn px-4 mx-4 font-circular-std" to="/team">Team</Link>
+          </li>
+          {fire.auth().currentUser != null ? (
             <li className="nav-item navs my-3">
-              <Link className="nav-link btn btn-outline-warning px-4 mx-4" style={{ color: '#fff', letterSpacing: '2px' }} to="/team">Team</Link>
+              <button onClick={() => logout()} className="nav-link px-3 logout btn btn-warning">Logout</button>
             </li>
-            {fire.auth().currentUser != null ? (
-              <li className="nav-item navs my-3">
-                <button onClick={() => logout()} className="nav-link px-3 logout btn btn-warning">Logout</button>
-              </li>
-            ) : (
-              <li className="nav-item navs my-3">
-                <Link className="nav-link btn btn-warning px-4" to="/join">Get Started</Link>
-              </li>
-            )}
-          </ul>
-        </div>
-      </nav>
-    </div>
+          ) : (
+            <li className="nav-item navs my-3">
+              <Link className="nav-link btn px-4 font-circular-std" to="/join">Get Started</Link>
+            </li>
+          )}
+        </ul>
+      </div>
+    </nav>
 
   )
 }
