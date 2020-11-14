@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import '../styles/fonts.css'
 import '../styles/App.css'
 import Authenticate from './Authenticate'
 import Landing from './Landing'
@@ -66,7 +66,6 @@ const App = () => {
       >
 
         <ToastContainer />
-        <Header />
         <Switch>
           {
             publicRoutes.map((url, index) => (

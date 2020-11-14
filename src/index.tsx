@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
+import './tailwind.generated.css'
 import App from './components/App'
 import * as serviceWorker from './serviceWorker'
 import 'react-toastify/dist/ReactToastify.css'

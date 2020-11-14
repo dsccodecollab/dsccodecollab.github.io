@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "CircularStd";
+    src: url("../assets/fonts/CircularStd-Black.woff2") format("woff2"),
+      url("../assets/fonts/CircularStd-Black.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "CircularStd";
+    src: url("../assets/fonts/CircularStd-Bold.woff2") format("woff2"),
+      url("../assets/fonts/CircularStd-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "CircularStd";
+    src: url("../assets/fonts/CircularStd-Medium.woff2") format("woff2"),
+      url("../assets/fonts/CircularStd-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "CircularStd";
+    src: url("../assets/fonts/CircularStd-Book.woff2") format("woff2"),
+      url("../assets/fonts/CircularStd-Book.woff") format("woff");
+    font-weight: 350;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: 'JetBrainsMono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
