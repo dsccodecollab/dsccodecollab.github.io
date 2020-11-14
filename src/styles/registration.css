@@ -1,0 +1,24 @@
+.custom-form-group {
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 50px;
+    display: grid;
+    padding: 0 0.4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.custom-form-group input {
+    background-color: #f0f0f0;
+    font-family: 'CircularStd';
+}
+
+.orange-button {
+    background-color: #FF9800;
+    font-family: 'CircularStd';
+    font-weight: bold;
+    border-radius: 4px;
+}

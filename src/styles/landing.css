@@ -1,20 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
 .welcome {
-	font-family: "Caveat", cursive;
+	font-family: "CircularStd", cursive;
 	font-size: 2rem;
 	letter-spacing: 3px;
 	font-weight: bolder !important;	
 }
 
+.font-deepblue {
+	color: #FF9800;
+}
+
+.font-circular-std {
+	font-family: 'CircularStd';
+}
+
 .brand-heading {
 	font-family: "Patrick Hand", cursive;
 	font-size: 20px;
-	color: orange
+	color: #FF9800
 }
 
 .welcome2 {
-	font-family: "Caveat", cursive;
+	font-family: "CircularStd", cursive;
 	font-size: 2rem;
 	letter-spacing: 4px;
 	font-weight: bolder !important;	
@@ -32,6 +40,6 @@
 .tag-line {
 	color: #ffffff;
 	font-size: 35px;
-	font-family: "Goldman", cursive;
+	font-family: "CircularStd", cursive;
 	letter-spacing: 2px;
 }

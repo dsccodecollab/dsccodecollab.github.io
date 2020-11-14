@@ -3,10 +3,13 @@
 
 
 .left-panel {
-    background: #0edaf5;
-    border-bottom-right-radius: 500px;
+    background: #FF9800;
     padding-top: 20px;
 
+}
+
+.font-circular-std {
+	font-family: 'CircularStd';
 }
 
 .form-group {
@@ -49,33 +52,26 @@
 
 .alternate {
     color: black;
-    font-family: "Poppins", sans-serif !important;
+    font-family: "CircularStd", sans-serif !important;
     font-size: 21px;
     letter-spacing: 2px;
 }
 
 .title {
-    font-family: "Poppins", sans-serif;
+    font-family: "CircularStd", sans-serif;
     font-size: 2.2rem;
     color: #444;
 }
 
 .alternate-btn {
-    font-family: "Poppins", sans-serif;
+    font-family: "CircularStd", sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 .authenticate {
-    background: #ffffff;
+    background:#212121;
     box-shadow:  16px 16px 32px #1e1e1f, 
              -16px -16px 32px #1e1f1f;
-}
-
-@media (max-width: 700px)
-{
-    .left-panel {
-        border-bottom-left-radius: 500px;
-    }
 }

@@ -3,10 +3,17 @@
 }
 
 .navs a {
-	color: black !important;
+	color: white !important;
 	text-transform: uppercase;
 }
 
+.navs a:hover {
+	color: #FF9800 !important;
+}
+
+.font-circular-std {
+	font-family: 'CircularStd';
+}
 
 .logout {
 	text-decoration: none;
