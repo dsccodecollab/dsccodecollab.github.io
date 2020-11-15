@@ -20,10 +20,10 @@ const Header = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light shadow-sm md:px-24">
+    <nav className="navbar navbar-dark navbar-expand-lg navbar-light shadow-sm md:px-24">
       <Link className="navbar-brand text-center" to="/">
         <img
-          src="https://cdn.discordapp.com/attachments/764129322088267837/770685331305005096/The_coding_culture-05.png"
+          src="/logo512.png"
           alt="the coding culture"
           className="w-16 h-auto"
           style={{ filter: 'invert(1)' }}
