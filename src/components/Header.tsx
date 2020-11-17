@@ -36,7 +36,7 @@ const Header = () => {
         <div className="mr-auto"></div>
         <ul className="navbar-nav px-3 justify-content-end">
           <li className="nav-item navs my-3">
-            <Link className="nav-link btn px-4 mx-4 font-circular-std" to="/team">Team</Link>
+            <Link className="nav-link btn px-4 mx-4 font-circular-std" to="/team">Organizers</Link>
           </li>
           {fire.auth().currentUser != null ? (
             <li className="nav-item navs my-3">
@@ -44,7 +44,7 @@ const Header = () => {
             </li>
           ) : (
             <li className="nav-item navs my-3">
-              <Link className="nav-link btn px-4 font-circular-std" to="/join">Get Started</Link>
+              <Link className="nav-link btn px-4 font-circular-std" to="/join">Register For Contest</Link>
             </li>
           )}
         </ul>
