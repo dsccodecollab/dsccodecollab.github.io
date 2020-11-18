@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import fire from '../config'
 import '../styles/registration.css'
+import axios from 'axios'
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -34,6 +35,13 @@ const Register = () => {
               })
                 .then((user) => {
                   console.log('user created')
+                  axios.post('https://email-api-thecodingculture.herokuapp.com/send_email', {
+                    email: email
+                  })
+                    .then((s) => {
+                      console.log('Email send')
+                    })
+                    .catch(() => console.log('error sending mail'))
                 })
                 .catch(() => {
                   console.log('failed to store user')

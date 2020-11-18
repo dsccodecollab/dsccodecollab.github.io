@@ -12,6 +12,8 @@ import {
 import Topic from './Topic'
 import { ToastContainer } from 'react-toastify'
 import About from './About'
+import Footer from './Footer'
+import Header from './Header'
 
 const App = () => {
   // const [user, setUser] = useState({})
@@ -62,6 +64,7 @@ const App = () => {
   // } else {
   return (
     <BrowserRouter>
+      <Header />
       <div
         className="container-fluid"
       >
@@ -76,6 +79,7 @@ const App = () => {
           <Redirect to="/" />
         </Switch>
       </div>
+      <Footer />
     </BrowserRouter>
   )
 }
