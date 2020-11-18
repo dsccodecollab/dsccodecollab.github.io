@@ -79,6 +79,9 @@ const App = () => {
           <Redirect to="/" />
         </Switch>
       </div>
+      <div className="mb-32 mt-10">
+
+      </div>
       <Footer />
     </BrowserRouter>
   )
