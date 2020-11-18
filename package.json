@@ -17,6 +17,7 @@
     "@types/react-swipeable": "^5.2.0",
     "@types/react-swipeable-views": "^0.13.0",
     "@types/react-toastify": "^4.1.0",
+    "axios": "^0.21.0",
     "emailjs-com": "^2.6.3",
     "firebase": "^7.22.0",
     "js-cookie": "^2.2.1",

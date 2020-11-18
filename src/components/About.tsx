@@ -15,7 +15,7 @@ function About () {
         </div>
         <div className="flex flex-col md:flex justify-center">
           <div className="sm:pb-32 sm:pr-8 md:pr-12 lg:pr-32">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1ugNfaVWltiMgtNoIl2f_uwdAzcgDLizO&hl=en" frameBorder="0" style={{ border: '0' }} width="600" height="450" className="map"></iframe>
+            <iframe title="0" src="https://www.google.com/maps/d/embed?mid=1ugNfaVWltiMgtNoIl2f_uwdAzcgDLizO&hl=en" frameBorder="0" style={{ border: '0' }} width="600" height="450" className="map"></iframe>
 
           </div>
         </div>

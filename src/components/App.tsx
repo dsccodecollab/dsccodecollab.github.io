@@ -11,7 +11,6 @@ import {
 } from 'react-router-dom'
 import Topic from './Topic'
 import { ToastContainer } from 'react-toastify'
-import Footer from './Footer'
 import About from './About'
 
 const App = () => {
@@ -77,7 +76,6 @@ const App = () => {
           <Redirect to="/" />
         </Switch>
       </div>
-      <Footer />
     </BrowserRouter>
   )
 }

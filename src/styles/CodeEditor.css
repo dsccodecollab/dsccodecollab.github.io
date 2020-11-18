@@ -36,7 +36,8 @@
 .code {
     color: white;
     font-family: "JetBrainsMono", monospace;
-    animation: type1 10s infinite;
+    animation: type1 12s infinite steps(40);
+    animation-delay: 1s;
     width: 0ch;
     overflow: hidden;
     white-space: nowrap;
@@ -51,7 +52,8 @@
 .code1 {
     color: white;
     font-family: "JetBrainsMono", monospace;
-    animation: type2 10s infinite;
+    animation: type2 12s infinite steps(42);
+    animation-delay: 2s;
     width: 0ch;
     overflow: hidden;
     white-space: nowrap;
@@ -75,9 +77,11 @@
     color: white;
 }
 
+
+
 @keyframes type1 {
     0% {
-        width: 0ch;
+        width: 2ch;
     }
 
     50% {
@@ -87,7 +91,7 @@
 
 @keyframes type2 {
     0% {
-        width: 0ch;
+        width: 2ch;
     }
 
     50% {

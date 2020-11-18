@@ -14,7 +14,7 @@ function CodeEditor () {
           <span className="print">print</span>
           <span className="parentheses">(</span>
           <span className="string font-weight-bold break-words">&quot;Welcome to The Coding Culture&quot;</span><
-            span className="parentheses">)</span>
+            span className="parentheses">)</span><span className="cursor">&nbsp;</span>
         </h1>
         <h1 className="code1 text-xs lg:text-sm mt-3">
           <span className="print">print</span>
