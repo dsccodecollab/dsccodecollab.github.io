@@ -1,13 +1,11 @@
 import React from 'react'
 import Register from './Register'
 import '../styles/Authenticate.css'
-import Header from './Header'
 
 const Authenticate = () => {
   return (
-    <div className="flex flex-col">
-      <Header />
-      <div className="container authenticate mt-5" style={{ zIndex: 100 }}>
+    <div className="">
+      <div className="container authenticate mt-5 ">
         <div className="row">
           <div className="col-sm-12 col-md-6 left-panel text-center py-5 px-5">
             <img

@@ -13,8 +13,8 @@ function CodeEditor () {
         <h1 className="code text-xs lg:text-sm">
           <span className="print">print</span>
           <span className="parentheses">(</span>
-          <span className="string font-weight-bold break-words">&quot;Welcome to The Coding Culture&quot;</span><
-            span className="parentheses">)</span>
+          <span className="string font-weight-bold break-words">&quot;Welcome to The Coding Culture&quot;</span>
+          <span className="parentheses">)</span>
         </h1>
         <h1 className="code1 text-xs lg:text-sm mt-3">
           <span className="print">print</span>

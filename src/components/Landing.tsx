@@ -1,13 +1,10 @@
 import React from 'react'
 import '../styles/landing.css'
 import CodeEditor from './CodeEditor'
-import Header from './Header'
-import Footer from './Footer'
 
 const Landing = () => {
   return (
     <div className="h-full flex flex-col overflow-auto">
-      <Header />
       <div className="md:grid md:grid-cols-2 flex flex-col flex-grow justify-center pb-20 pt-12">
         <div className="flex flex-col justify-center items-start px-12 m-2 sm:pl-12 md:pl-24 xl:pl-48">
           <h1 className="text-4xl sm:text-4xl font-deepblue font-bold font-circular-std text-left">The Coding Culture</h1>
@@ -28,7 +25,6 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

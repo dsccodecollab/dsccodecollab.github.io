@@ -1,24 +1,8 @@
 import React from 'react'
-import fire from '../config'
-import { useHistory, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../styles/header.css'
 
 const Header = () => {
-  const history = useHistory()
-
-  const logout = () => {
-    fire
-      .auth()
-      .signOut()
-      .then(() => {
-        history.push('/')
-        window.location.assign('/join')
-      })
-      .catch((err) => {
-        console.log('An error occured', err)
-      })
-  }
-
   return (
     <nav className="navbar navbar-dark navbar-expand-lg navbar-light shadow-sm md:px-24">
       <Link className="navbar-brand text-center" to="/">
@@ -36,17 +20,11 @@ const Header = () => {
         <div className="mr-auto"></div>
         <ul className="navbar-nav px-3 justify-content-end">
           <li className="nav-item navs my-3">
-            <Link className="nav-link btn px-4 mx-4 font-circular-std" to="/team">Organizers</Link>
+            <Link className="nav-link btn px-4 mx-4 font-circular-std" to="/about">Organizers</Link>
           </li>
-          {fire.auth().currentUser != null ? (
-            <li className="nav-item navs my-3">
-              <button onClick={() => logout()} className="nav-link px-3 logout btn btn-warning">Logout</button>
-            </li>
-          ) : (
-            <li className="nav-item navs my-3">
-              <Link className="nav-link btn px-4 font-circular-std" to="/join">Register For Contest</Link>
-            </li>
-          )}
+          <li className="nav-item navs my-3">
+            <Link className="nav-link btn px-4 font-circular-std" to="/join">Get Started</Link>
+          </li>
         </ul>
       </div>
     </nav>
