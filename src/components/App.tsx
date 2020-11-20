@@ -66,7 +66,7 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <div
-        className="container-fluid"
+        className="container-fluid" style={{ display: 'contents' }}
       >
 
         <ToastContainer />
