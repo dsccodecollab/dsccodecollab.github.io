@@ -54,7 +54,7 @@ const Register = () => {
                 name: '',
                 universityName: ''
               })
-              toast.success('Registered for the upcoming contest. Check your email for more details.')
+              toast.success('Thanks for subscribing. We will send you an email shortly with further details')
             })
             .catch((err) => {
               setUser({
