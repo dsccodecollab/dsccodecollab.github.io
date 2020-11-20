@@ -23,7 +23,7 @@ const Header = () => {
             <Link className="nav-link btn px-4 mx-4 font-circular-std" to="/about">Organizers</Link>
           </li>
           <li className="nav-item navs my-3">
-            <Link className="nav-link btn px-4 font-circular-std" to="/join">Get Started</Link>
+            <Link className="nav-link btn px-4 font-circular-std" to="/join">Subscribe</Link>
           </li>
         </ul>
       </div>
