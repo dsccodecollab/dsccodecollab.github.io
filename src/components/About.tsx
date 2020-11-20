@@ -6,7 +6,7 @@ function About () {
     <div>
       <div className="justify-center">
         <h1 className="text-4xl sm:text-4xl font-deepblue font-bold font-circular-std text-center">The Coding Culture</h1>
-        <p className="sm:pt-8 pt-4 text-lg sm:pb-32 font-thin pb-4 font-circular-std leading-relaxed text-center text-white">
+        <p className="sm:pt-8 p-4 text-lg sm:pb-32 font-thin pb-4 font-circular-std leading-relaxed text-center text-white">
             &quot;Alone we can do so little; together we can do so much.&quot;
         </p>
         <div className="flex justify-center">
