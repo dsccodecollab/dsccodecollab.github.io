@@ -93,6 +93,11 @@ const publicRoutes = [
     path: '/join',
     component: Authenticate
   },
+  // uncomment to enable login
+  // {
+  //   path: '/login',
+  //   component: Authenticate
+  // },
   {
     path: '/topic',
     component: Topic

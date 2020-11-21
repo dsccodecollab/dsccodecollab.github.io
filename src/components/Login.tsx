@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import fire from '../config'
 
 const Login = () => {
-  const history = useHistory()
-
   const [user, setUser] = useState({
     email: '',
     password: ''
@@ -17,44 +14,38 @@ const Login = () => {
     setUser({ ...user, [text]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (email && password) {
-      fire.auth().signInWithEmailAndPassword(email, password)
-        .then((success) => {
-          setUser({
-            ...user,
-            email: '',
-            password: ''
-          })
-          history.push('/')
+      try {
+        await fire.auth().signInWithEmailAndPassword(email, password)
+        toast.success('Login successful')
+      } catch (err) {
+        toast.error(err.message)
+      } finally {
+        setUser({
+          email: '',
+          password: ''
         })
-        .catch((err) => {
-          setUser({
-            ...user,
-            email: '',
-            password: ''
-          })
-          toast.error(err.message)
-        })
+      }
     } else {
       toast.error('Please fill all the fields')
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="py-5">
-      <h1 className="text-center mb-4 title">Sign in</h1>
-      <div className="form-group px-3">
-        <i className="fas fa-user"></i>
-        <input className="" type="text" placeholder="xyz@gmail.com" value={email} onChange={handleChange('email')} />
+    <form onSubmit={handleSubmit} className="flex flex-col justify-center h-full">
+      <h2 className="text-center mb-4 title text-white">Sign In</h2>
+      <div className="custom-form-group pl-3">
+        <i className="fas fa-envelope"></i>
+        <input type="email" className="pl-4" placeholder="xyz@example.com" name="email" value={email} onChange={handleChange('email')} />
       </div>
-      <div className="form-group px-3">
-        <i className="fas fa-user"></i>
-        <input className="" type="password" placeholder="confidential" value={password} onChange={handleChange('password')} />
+      <div className="custom-form-group pl-3">
+        <i className="fas fa-unlock-alt"></i>
+        <input type="password" className="pl-4" placeholder="Password" value={password} onChange={handleChange('password')} />
       </div>
       <div className="text-center mt-3">
-        <button type="submit" className="btn btn-success px-5">Log in</button>
+        <button type="submit" className="orange-button px-5 py-2">Log in</button>
       </div>
     </form>
   )
