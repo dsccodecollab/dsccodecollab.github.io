@@ -4,16 +4,16 @@
     margin: 10px 0;
     height: 50px;
     display: grid;
-    padding: 0 0.4rem;
     position: relative;
-    display: flex;
     align-items: center;
     border-radius: 5px;
+    grid-template-columns: 10% 90%;
 }
 
 .custom-form-group input {
     background-color: #f0f0f0;
     font-family: 'CircularStd';
+    height: 100%;
 }
 
 .orange-button {

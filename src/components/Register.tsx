@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import fire from '../config'
 import '../styles/registration.css'
-import axios from 'axios'
+// import axios from 'axios'
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -19,84 +19,73 @@ const Register = () => {
     setUser({ ...user, [text]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const validateData = () => {
     if (name && email && password && confirmPassword) {
-      if (password === confirmPassword) {
-        if (password.length < 6) {
-          toast.error('Password must be greater than 5 characters')
-        } else {
-          fire.auth().createUserWithEmailAndPassword(email, password)
-            .then((success) => {
-              fire.firestore().collection('users').add({
-                name: name,
-                email: email,
-                universityName: universityName
-              })
-                .then((user) => {
-                  console.log('user created')
-                  axios.post('https://email-api-thecodingculture.herokuapp.com/send_email', {
-                    email: email
-                  })
-                    .then((s) => {
-                      console.log('Email send')
-                    })
-                    .catch(() => console.log('error sending mail'))
-                })
-                .catch(() => {
-                  console.log('failed to store user')
-                })
-              setUser({
-                ...user,
-                email: '',
-                password: '',
-                confirmPassword: '',
-                name: '',
-                universityName: ''
-              })
-              toast.success('Thanks for subscribing. We will send you a mail shortly with further updates')
-            })
-            .catch((err) => {
-              setUser({
-                ...user,
-                email: '',
-                password: '',
-                confirmPassword: '',
-                name: '',
-                universityName: ''
-              })
-              toast.error(err.message)
-            })
-        }
-      } else {
+      if (password !== confirmPassword) {
         toast.error('Password and confirm Password must be same')
+        return false
       }
+      if (password.length < 6) {
+        toast.error('Password must be atleast 6 characters')
+        return false
+      }
+      return true
     } else {
       toast.error('Please fill all the fields')
+      return false
+    }
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (validateData()) {
+      try {
+        await fire.auth().createUserWithEmailAndPassword(email, password)
+        await fire.firestore().collection('users').add({
+          name: name,
+          email: email,
+          universityName: universityName
+        })
+        // uncomment it when the email service is back up
+        // await axios.post('https://email-api-thecodingculture.herokuapp.com/send_email', { email: email })
+
+        toast.success('Congratulations, You are now a member of The Coding Culture')
+      } catch (error) {
+        toast.error(error.message)
+      } finally {
+        setUser({
+          ...user,
+          email: '',
+          password: '',
+          confirmPassword: '',
+          name: '',
+          universityName: ''
+        })
+      }
     }
   }
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col justify-center h-full">
-      <h2 className="text-center mb-4 title text-white">Register</h2>
+      <h2 className="text-center mb-4 title text-white">Subscribe</h2>
       <input type="hidden" name="message" value="Hello just checking" />
-      <div className="custom-form-group px-3">
+      <div className="custom-form-group pl-3">
         <i className="fas fa-user"></i>
         <input type="text" className="pl-4" name="name" placeholder="Full Name" value={name} onChange={handleChange('name')} />
       </div>
-      <div className="custom-form-group px-3">
+      <div className="custom-form-group pl-3">
         <i className="fas fa-envelope"></i>
         <input type="email" className="pl-4" placeholder="xyz@example.com" name="email" value={email} onChange={handleChange('email')} />
       </div>
-      <div className="custom-form-group px-3">
+      <div className="custom-form-group pl-3">
         <i className="fas fa-university"></i>
         <input type="text" className="pl-4" placeholder="University Name" value={universityName} onChange={handleChange('universityName')} />
       </div>
-      <div className="custom-form-group px-3">
+      <div className="custom-form-group pl-3">
         <i className="fas fa-unlock-alt"></i>
         <input type="password" className="pl-4" placeholder="Password" value={password} onChange={handleChange('password')} />
       </div>
-      <div className="custom-form-group px-3">
+      <div className="custom-form-group pl-3">
         <i className="fas fa-unlock-alt"></i>
         <input type="password" className="pl-4" placeholder="Confirm Password" value={confirmPassword} onChange={handleChange('confirmPassword')} />
       </div>
