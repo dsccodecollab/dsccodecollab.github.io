@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
-import fire from '../config'
+import fire from '../../config'
 
 const Login = () => {
   const [user, setUser] = useState({
