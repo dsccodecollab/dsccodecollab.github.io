@@ -16,7 +16,7 @@ const WebinarItem = ({ webinar }: { webinar: WebinarType }) => {
       </div>
       {webinar.links.map((link) => (
         <div className="col-md-4" key={link.name}>
-          {webinar.links.length === 0 ? '' : <a href={link.link} target='_blank' rel='noopener noreferrer'><h3 className='text-white text-center mb-2 font-circular-std'>{link.name}</h3></a>}
+          {webinar.links.length === 1 ? '' : <a href={link.link} target='_blank' rel='noopener noreferrer'><h3 className='text-white text-center mb-2 font-circular-std'>{link.name}</h3></a>}
           <div className='iframe-container'>
             <iframe title={link.name} className='iframe' src={link.embed} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
           </div>
