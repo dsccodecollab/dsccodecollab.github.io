@@ -1,7 +1,7 @@
 import React from 'react'
 import Register from './Register'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import '../styles/Authenticate.css'
+import '../../styles/Authenticate.css'
 // import Login from './Login'
 
 const Authenticate = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
-import fire from '../config'
-import '../styles/registration.css'
+import fire from '../../config'
+import '../../styles/registration.css'
 // import axios from 'axios'
 
 const Register = () => {
