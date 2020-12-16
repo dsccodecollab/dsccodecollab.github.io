@@ -5,6 +5,8 @@ import '../styles/registration.css'
 // import axios from 'axios'
 
 const Register = () => {
+  const [loading, setLoading] = useState(false)
+
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -39,6 +41,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (validateData()) {
+      setLoading(true)
       try {
         await fire.auth().createUserWithEmailAndPassword(email, password)
         await fire.firestore().collection('users').add({
@@ -49,9 +52,13 @@ const Register = () => {
         // uncomment it when the email service is back up
         // await axios.post('https://email-api-thecodingculture.herokuapp.com/send_email', { email: email })
 
-        toast.success('Congratulations, You are now a member of The Coding Culture')
+        toast.success('You have successfully registered for the upcoming contest.')
       } catch (error) {
-        toast.error(error.message)
+        if (error.code === 'auth/email-already-in-use') {
+          toast.success('You have successfullt registered for the upcoming contest.')
+        } else {
+          toast.error(error.message)
+        }
       } finally {
         setUser({
           ...user,
@@ -61,6 +68,7 @@ const Register = () => {
           name: '',
           universityName: ''
         })
+        setLoading(false)
       }
     }
   }
@@ -90,7 +98,14 @@ const Register = () => {
         <input type="password" className="pl-4" placeholder="Confirm Password" value={confirmPassword} onChange={handleChange('confirmPassword')} />
       </div>
       <div className="text-center mt-3">
-        <button type="submit" className="orange-button px-5 py-2">Submit</button>
+        <button type="submit" className="orange-button px-5 py-2">
+          {
+            loading
+              ? <p className="animate-pulse">Processing....</p>
+
+              : <p>Submit</p>
+          }
+        </button>
       </div>
     </form>
   )

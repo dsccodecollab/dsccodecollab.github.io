@@ -14,6 +14,8 @@ import { ToastContainer } from 'react-toastify'
 import About from './About'
 import Footer from './Footer'
 import Header from './Header'
+import Sponsors from './Sponsors'
+import CommunityPartners from './CommunityPartners'
 
 const App = () => {
   // const [user, setUser] = useState({})
@@ -101,6 +103,14 @@ const publicRoutes = [
   {
     path: '/topic',
     component: Topic
+  },
+  {
+    path: '/sponsors',
+    component: Sponsors
+  },
+  {
+    path: '/communityPartners',
+    component: CommunityPartners
   },
   {
     path: '/about',
