@@ -29,7 +29,7 @@ function CommunityPartners () {
             <button className="btn btn-outline-warning mr-3" onClick={() => setModal(!modal)}>
                     Check Brouchre
             </button>
-            <button className="btn btn-warning px-8">
+            <button className="btn btn-warning px-8" onClick={ (e) => window.open('https://forms.gle/4wRZpWDWc3YgwzCv8') }>
                     Join Us
             </button>
           </div>
@@ -50,8 +50,8 @@ function CommunityPartners () {
         {
           community.map((list, i) => {
             return (
-              <div className="w-64 m-4 py-6 rounded-xl bg-current" key={i}>
-                <img className="w-32 h-32 mx-auto rounded-full mb-4 bg-white" src={list.img} alt="" />
+              <div className="w-64 m-4 py-6 rounded-xl bg-current p-4 flex flex-col justify-between leading-normal" key={i}>
+                <img className="w-32 h-32 mx-auto rounded-full mb-4 bg-white flex-none bg-cover text-center overflow-hidden" src={list.img} alt="" />
                 <p className="mx-2 mt-2 text-center text-lg text-white font-semibold mb-4">{list.name}</p>
                 <div className="flex justify-center items-center mt-2">
                   <i className="fab fa-facebook fa-2x mx-2 transition duration-500 ease-in-out transform hover:-translate-y-2 cursor-pointer rounded-full text-blue-800" onClick={ (e) => window.open(`${list.fbLink}`) }></i>
