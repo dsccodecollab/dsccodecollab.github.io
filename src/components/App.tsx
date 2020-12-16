@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/fonts.css'
 import '../styles/App.css'
-import Authenticate from './Authenticate'
+import Authenticate from './auth/Authenticate'
 import Landing from './Landing'
 import {
   BrowserRouter,
@@ -9,7 +9,9 @@ import {
   Route,
   Redirect
 } from 'react-router-dom'
-import Topic from './Topic'
+// import Topic from './Topic'
+import Contest from './contest/contest'
+import Webinar from './webinar/webinar'
 import { ToastContainer } from 'react-toastify'
 import About from './About'
 import Footer from './Footer'
@@ -100,10 +102,10 @@ const publicRoutes = [
   //   path: '/login',
   //   component: Authenticate
   // },
-  {
-    path: '/topic',
-    component: Topic
-  },
+  // {
+  //   path: '/topic',
+  //   component: Topic
+  // },
   {
     path: '/sponsors',
     component: Sponsors
@@ -115,6 +117,14 @@ const publicRoutes = [
   {
     path: '/about',
     component: About
+  },
+  {
+    path: '/contest',
+    component: Contest
+  },
+  {
+    path: '/webinar',
+    component: Webinar
   },
   {
     path: '/',
