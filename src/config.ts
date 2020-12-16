@@ -15,4 +15,6 @@ export const firebaseConfig = {
 
 const fire = firebase.initializeApp(firebaseConfig)
 
+export const BLOG_JSON_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/the-coding-culture'
+
 export default fire
