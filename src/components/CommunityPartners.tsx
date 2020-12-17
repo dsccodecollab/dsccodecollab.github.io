@@ -45,23 +45,14 @@ function CommunityPartners () {
           </Player>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center px-32 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center px-32 py-10">
 
         {
           community.map((list, i) => {
             return (
-              <div className="w-64 m-4 py-6 rounded-xl bg-current p-4 flex flex-col justify-between leading-normal" key={i}>
+              <div className="transition duration-500 ease-in-out transform w-64 m-4 py-6 rounded-xl bg-current p-4 flex flex-col justify-between leading-normal cursor-pointer hover:scale-110" key={i} onClick={ (e) => window.open(`${list.webLink}`) }>
                 <img className="w-32 h-32 mx-auto rounded-full mb-4 bg-white flex-none bg-cover text-center overflow-hidden" src={list.img} alt="" />
                 <p className="mx-2 mt-2 text-center text-lg text-white font-semibold mb-4">{list.name}</p>
-                <div className="flex justify-center items-center mt-2">
-                  <i className="fab fa-facebook fa-2x mx-2 transition duration-500 ease-in-out transform hover:-translate-y-2 cursor-pointer rounded-full text-blue-800" onClick={ (e) => window.open(`${list.fbLink}`) }></i>
-                  <i className="fab fa-twitter fa-2x mx-2 transition duration-500 ease-in-out transform hover:-translate-y-2 text-blue-500 cursor-pointer" onClick={ (e) => window.open(`${list.twLink}`) }></i>
-                  <i className="fab fa-linkedin fa-2x mx-2 transition duration-500 ease-in-out transform hover:-translate-y-2 text-blue-600 cursor-pointer" onClick={ (e) => window.open(`${list.liLink}`) }></i>
-                </div>
-                <div className="flex justify-center items-center mt-3">
-                  <i className="fab fa-instagram fa-2x mx-2 transition duration-500 ease-in-out transform hover:-translate-y-2 cursor-pointer rounded-full text-red-400" onClick={ (e) => window.open(`${list.igLink}`) }></i>
-                  <i className="fas fa-external-link-alt fa-2x mx-2 transition duration-500 ease-in-out transform hover:-translate-y-2 text-red-600 cursor-pointer" onClick={ (e) => window.open(`${list.webLink}`) }></i>
-                </div>
               </div>
             )
           })
