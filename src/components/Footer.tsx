@@ -76,12 +76,12 @@ const Footer = () => {
                   </li>
                   <li>
                     <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="/">Community Partners
+                      href="/communityPartners">Community Partners
                     </a>
                   </li>
                   <li>
                     <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="/">Sponsers
+                      href="/sponsors">Sponsors
                     </a>
                   </li>
                   <li>
