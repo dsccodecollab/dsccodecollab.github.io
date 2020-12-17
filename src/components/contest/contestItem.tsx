@@ -13,7 +13,13 @@ const ContestItem = ({ contest }: { contest: ContestType }) => {
         <h2 className="text-left mb-4 title text-white">{contest.name}</h2>
         <p className="text-white mb-3">{contest.description}</p>
         <a href={contest.link} className="orange-button" target="_blank" rel="noopener noreferrer">
-          <button className="orange-button px-5 py-2">Try contest</button>
+          {
+            contest.status
+            ?
+            <button className="orange-button px-5 py-2">Register</button>
+            :
+            <button className="orange-button px-5 py-2">Try contest</button> 
+          }
         </a>
       </div>
     </div>

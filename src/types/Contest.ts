@@ -5,5 +5,6 @@ export default interface Contest {
     description: string,
     link: string,
     img: string,
-    time: FireDate
+    time: FireDate,
+    status: boolean
 }
