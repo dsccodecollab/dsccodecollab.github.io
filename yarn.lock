@@ -1648,17 +1648,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-<<<<<<< HEAD
-"@lottiefiles/react-lottie-player@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@lottiefiles/react-lottie-player/-/react-lottie-player-2.2.1.tgz#96a564901df96bd3de7a823ba67952eeb7d2bf62"
-  integrity sha512-1jHty43ZeqwDdvPtgxpZht8Z0NR3jV8PLD34MnmbPSINzdAVUr2RtdI5fcBiU85YYGjvPL5dPlybQuZcFvuABw==
-=======
 "@lottiefiles/react-lottie-player@^2.2.2":
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/@lottiefiles/react-lottie-player/-/react-lottie-player-2.2.2.tgz#8513f79f0ea1ed99471f6ff882e92ddb2b7d6b29"
   integrity sha512-PgCezQAFk+xnNwC3EJolvHJm2P3KiVn6RbvX+inLo/9IQu/iDoyj/30F9Ge5LgCJe+UIZ2uDR0SaV6ro18B1Hg==
->>>>>>> d315832 (blogs layout changed)
   dependencies:
     lottie-web "^5.6.0"
 

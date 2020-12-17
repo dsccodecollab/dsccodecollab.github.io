@@ -18,9 +18,9 @@ const Blog = () => {
   return (
 
     <div className='h-min-full container'>
-      <div className="flex md:flex-row flex-col mt-12 md:px-20 mb-10">
-        <div className="flex flex-col flex justify-center px-6 sm:pt-12 md:px-24">
-          <h1 className="text-4xl md:text-5xl font-deepblue font-bold font-circular-std text-left">Blogs</h1>
+      <div className="flex lg:flex-row flex-col mt-12 lg:px-20 mb-10">
+        <div className="flex flex-col flex justify-center px-6 sm:pt-12 lg:px-24">
+          <h1 className="text-4xl lg:text-5xl font-deepblue font-bold font-circular-std text-left">Blogs</h1>
           <p className="sm:pt-8 text-lg sm:pb-32 font-thin pb-4 font-circular-std leading-relaxed text-left text-white">
             &quot;Blogs allow you to talk about any topic you are interested in and express your opinion&quot;</p>
 
