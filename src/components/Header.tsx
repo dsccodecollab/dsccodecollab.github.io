@@ -20,6 +20,9 @@ const Header = () => {
         <div className="mr-auto"></div>
         <ul className="navbar-nav px-3 justify-content-end">
           <li className="nav-item navs my-3">
+            <Link className="nav-link btn px-4 font-circular-std" to="/blog">Blogs</Link>
+          </li>
+          <li className="nav-item navs my-3">
             <Link className="nav-link btn px-4 font-circular-std" to="/contest">Contests</Link>
           </li>
           <li className="nav-item navs my-3">

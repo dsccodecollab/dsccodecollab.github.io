@@ -12,6 +12,7 @@ import {
 // import Topic from './Topic'
 import Contest from './contest/contest'
 import Webinar from './webinar/webinar'
+import Blog from './blog/blog'
 import { ToastContainer } from 'react-toastify'
 import About from './About'
 import Footer from './Footer'
@@ -125,6 +126,10 @@ const publicRoutes = [
   {
     path: '/webinar',
     component: Webinar
+  },
+  {
+    path: '/blog',
+    component: Blog
   },
   {
     path: '/',
