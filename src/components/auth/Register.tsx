@@ -75,7 +75,7 @@ const Register = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col justify-center h-full">
-      <h2 className="text-center mb-4 title text-white">Subscribe</h2>
+      <h2 className="text-center mb-4 title text-white">Register</h2>
       <input type="hidden" name="message" value="Hello just checking" />
       <div className="custom-form-group pl-3">
         <i className="fas fa-user"></i>
