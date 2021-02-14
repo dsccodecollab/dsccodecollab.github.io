@@ -1,0 +1,28 @@
+.Not__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Not__section {
+  display: flex;
+  align-items: baseline;
+  height: 100%;
+  margin-bottom: -50px;
+}
+.Not__section > p {
+  font-size: 30vw;
+  margin: 0px;
+  color: white;
+}
+.Not__section > img {
+  filter: invert(1);
+  /* max-height: 300px; */
+  width: 25vw;
+}
+.Not__page > span {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-left: 20px;
+}
