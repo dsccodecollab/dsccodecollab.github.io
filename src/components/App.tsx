@@ -6,8 +6,9 @@ import Landing from './Landing'
 import {
   BrowserRouter,
   Switch,
-  Route,
-  Redirect
+  Route
+  // ,
+  // Redirect
 } from 'react-router-dom'
 // import Topic from './Topic'
 import Contest from './contest/contest'
@@ -19,6 +20,7 @@ import Footer from './Footer'
 import Header from './Header'
 import Sponsors from './Sponsors'
 import CommunityPartners from './CommunityPartners'
+import NotFound from './NotFound'
 
 const App = () => {
   // const [user, setUser] = useState({})
@@ -81,7 +83,10 @@ const App = () => {
               <Route key={index} path={url.path} component={() => <url.component />} />
             ))
           }
-          <Redirect to="/" />
+          <Route exact path="/" >
+            <Landing/>
+          </Route>
+          <Route component={NotFound}/>
         </Switch>
       </div>
       <div className="mb-32 mt-10">
@@ -130,11 +135,12 @@ const publicRoutes = [
   {
     path: '/blog',
     component: Blog
-  },
-  {
-    path: '/',
-    component: Landing
   }
+  // ,
+  // {
+  //   path: '/',
+  //   component: Landing
+  // }
 ]
 
 // const privateRoutes = [
