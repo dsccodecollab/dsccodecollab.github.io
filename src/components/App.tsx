@@ -21,6 +21,7 @@ import Header from './Header'
 import Sponsors from './Sponsors'
 import CommunityPartners from './CommunityPartners'
 import NotFound from './NotFound'
+import underMaintain from './underMaintain'
 
 const App = () => {
   // const [user, setUser] = useState({})
@@ -135,6 +136,14 @@ const publicRoutes = [
   {
     path: '/blog',
     component: Blog
+  },
+  {
+    path: '/terms-condition',
+    component: underMaintain
+  },
+  {
+    path: '/privacy-policy',
+    component: underMaintain
   }
   // ,
   // {

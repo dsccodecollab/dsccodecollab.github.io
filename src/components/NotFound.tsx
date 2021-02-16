@@ -10,7 +10,7 @@ const NotFound = () => {
         <div className='Not__section'>
           <p>4</p>
           <Link to="/" onClick={() => window.scrollTo(0, 0) }>
-            <img src={logo} alt="TCC_Logo" />
+            <img src={logo} alt="TCC_Logo" className="Not__image" />
           </Link>
           <p>4</p>
         </div>
