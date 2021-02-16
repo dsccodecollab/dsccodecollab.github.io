@@ -15,7 +15,7 @@
   margin: 0px;
   color: white;
 }
-.Not__section > img {
+.Not__image {
   filter: invert(1);
   /* max-height: 300px; */
   width: 25vw;
