@@ -7,7 +7,7 @@ const underMaintain = () => {
     <>
       <div className="Maintain__page">
         <div className="image__main">
-          <img src={gif}/>
+          <img src={gif} alt="maintain pic"/>
         </div>
         <span>
           <strong>Under Maintenance</strong>
