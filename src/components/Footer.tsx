@@ -1,6 +1,53 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
+  const useFulLinks = [
+    {
+      path: '/',
+      name: 'About Us'
+    },
+    {
+      path: '/communityPartners',
+      name: 'Community Partners'
+    },
+    {
+      path: '/sponsors',
+      name: 'Sponsors'
+    }
+  ]
+  const otherLinks = [
+    {
+      path: '/terms-condition',
+      name: 'Terms & Condition'
+    },
+    {
+      path: '/privacy-policy',
+      name: 'Privacy Policy'
+    }
+  ]
+  const socialButtons = [
+    {
+      path: 'https://twitter.com/tcc_dsc',
+      name: 'flex fab fa-twitter',
+      color: 'blue-400'
+    },
+    {
+      path: 'https://www.instagram.com/thecodingculture/',
+      name: 'flex fab fa-instagram',
+      color: 'pink-400'
+    },
+    {
+      path: 'https://github.com/dsccodecollab',
+      name: 'flex fab fa-github',
+      color: 'gray-900'
+    },
+    {
+      path: 'https://www.linkedin.com/company/thecodingculture/',
+      name: 'flex fab fa-linkedin',
+      color: 'blue-900'
+    }
+  ]
   return (
     <footer className="relative bg-gray-300 pt-8 pb-6">
       <div
@@ -32,34 +79,16 @@ const Footer = () => {
               Find us on any of these platforms!
             </h5>
             <div className="my-6 flex">
-              <button
-                className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-0 flex"
-                type="button"
-                onClick={ (e) => window.open('https://twitter.com/tcc_dsc') }
-              >
-                <i className="flex fab fa-twitter"></i>
-              </button>
-              <button
-                className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-0 flex"
-                type="button"
-                onClick={ (e) => window.open('https://www.instagram.com/thecodingculture/') }
-              >
-                <i className="flex fab fa-instagram"></i>
-              </button>
-              <button
-                className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-0 flex"
-                type="button"
-                onClick={ (e) => window.open('https://github.com/dsccodecollab') }
-              >
-                <i className="flex fab fa-github"></i>
-              </button>
-              <button
-                className="bg-white text-blue-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-0 flex"
-                type="button"
-                onClick={ (e) => window.open('https://www.linkedin.com/company/thecodingculture/') }
-              >
-                <i className="flex fab fa-linkedin"></i>
-              </button>
+              {socialButtons.map(({ path, name, color }, key) => (
+                <button
+                  className={`bg-white text-${color} shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-0 flex`}
+                  type="button"
+                  key={key}
+                  onClick={ (e) => window.open(path) }
+                >
+                  <i className={name}></i>
+                </button>
+              ))}
             </div>
           </div>
           <div className="w-full lg:w-6/12 px-4">
@@ -69,24 +98,19 @@ const Footer = () => {
                   Useful Links
                 </span>
                 <ul className="list-unstyled">
+                  {/* window.scrollTo(0, 0) for scroll on top */}
+                  {useFulLinks.map(({ path, name }, key) => (
+                    <li key={key}>
+                      <Link to={`${path}#`}>
+                        <p className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" onClick={() => window.scrollTo(0, 0)}>
+                          {name}
+                        </p>
+                      </Link>
+                    </li>
+                  ))}
                   <li>
                     <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="/">About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="/communityPartners">Community Partners
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="/sponsors">Sponsors
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://developers.google.com/community/dsc/leads">Developer Student Clubs
+                      href="https://developers.google.com/community/dsc/leads" target="__blank">Developer Student Clubs
                     </a>
                   </li>
                 </ul>
@@ -96,16 +120,16 @@ const Footer = () => {
                   Other Resources
                 </span>
                 <ul className="list-unstyled">
-                  <li>
-                    <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="/">Terms & Conditions
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="/">Privacy Policy
-                    </a>
-                  </li>
+                  {/* window.scrollTo(0, 0) for scroll on top */}
+                  {otherLinks.map(({ path, name }, key) => (
+                    <li key={key}>
+                      <Link to={path}>
+                        <p className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" onClick={() => window.scrollTo(0, 0)}>
+                          {name}
+                        </p>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
